@@ -3,48 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Essensplaner</title>
+  <title>Essensplan</title>
   <link rel="stylesheet" href="style.css">
   <script type="module" src="app.js" defer></script>
 </head>
 <body>
-  <h1>Mein Essensplaner</h1>
+  <div class="container">
+    <h1>🍽️ Essensplan</h1>
+    <p class="subtitle">Erstelle deinen Essensplan für die Woche</p>
 
-  <div id="planner">
-    <div class="day">
-      <label>Montag:</label>
-      <input type="text" class="meal" placeholder="Mahlzeit">
+    <div id="planner">
+      <div class="day"><label>Montag:</label><input type="text" class="meal" placeholder="z.B. Pasta"></div>
+      <div class="day"><label>Dienstag:</label><input type="text" class="meal" placeholder="z.B. Salat"></div>
+      <div class="day"><label>Mittwoch:</label><input type="text" class="meal" placeholder="z.B. Suppe"></div>
+      <div class="day"><label>Donnerstag:</label><input type="text" class="meal" placeholder="z.B. Reis"></div>
+      <div class="day"><label>Freitag:</label><input type="text" class="meal" placeholder="z.B. Pizza"></div>
+      <div class="day"><label>Samstag:</label><input type="text" class="meal" placeholder="z.B. Burger"></div>
+      <div class="day"><label>Sonntag:</label><input type="text" class="meal" placeholder="z.B. Brunch"></div>
     </div>
-    <div class="day">
-      <label>Dienstag:</label>
-      <input type="text" class="meal" placeholder="Mahlzeit">
+
+    <div class="buttons">
+      <button id="saveBtn">💾 Speichern</button>
+      <button id="loadBtn">📂 Laden</button>
     </div>
-    <div class="day">
-      <label>Mittwoch:</label>
-      <input type="text" class="meal" placeholder="Mahlzeit">
-    </div>
-    <div class="day">
-      <label>Donnerstag:</label>
-      <input type="text" class="meal" placeholder="Mahlzeit">
-    </div>
-    <div class="day">
-      <label>Freitag:</label>
-      <input type="text" class="meal" placeholder="Mahlzeit">
-    </div>
-    <div class="day">
-      <label>Samstag:</label>
-      <input type="text" class="meal" placeholder="Mahlzeit">
-    </div>
-    <div class="day">
-      <label>Sonntag:</label>
-      <input type="text" class="meal" placeholder="Mahlzeit">
-    </div>
+
+    <h2>Letzter gespeicherter Plan:</h2>
+    <pre id="output"></pre>
   </div>
-
-  <button id="saveBtn">Speichern</button>
-  <button id="loadBtn">Laden</button>
-
-  <h2>Letzter gespeicherter Plan:</h2>
-  <pre id="output"></pre>
 </body>
 </html>

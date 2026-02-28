@@ -1,7 +1,7 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js'
 
-// ⚠️ Nur den anon key im Frontend nutzen!
-const SUPABASE_URL = 'https://xyzcompany.supabase.co' // DEINE SUPABASE URL
+// Supabase Config
+const SUPABASE_URL = 'https://vnpxywdypxtawjuwbcck.supabase.co'
 const SUPABASE_ANON_KEY = 'sb_publishable_3U-G-5GD22ifueP4W0ghPw_gHLsSb7M'
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
@@ -10,7 +10,7 @@ const saveBtn = document.getElementById('saveBtn')
 const loadBtn = document.getElementById('loadBtn')
 const output = document.getElementById('output')
 
-// Hilfsfunktion: Plan aus Inputs erstellen
+// Funktion: Plan aus Inputs erstellen
 function getMealPlan() {
   const days = document.querySelectorAll('.day')
   const plan = {}
@@ -22,7 +22,7 @@ function getMealPlan() {
   return plan
 }
 
-// Hilfsfunktion: Inputs aus Plan füllen
+// Funktion: Inputs aus Plan füllen
 function setMealPlan(plan) {
   const days = document.querySelectorAll('.day')
   days.forEach(day => {
